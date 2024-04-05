@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora de Expresiones</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+    <div class="contenedor">
+        <h1> 233331 notación infija a prefija</h1>
+        <div class="form-group">
+            <label for="infix">Expresion Infija:</label>
+            <input type="text" id="infix">
+        </div>
+        <button id="calculate">Convertir a prefija y calcular resultado</button>
+        <div class="form-group">
+            <label for="prefix">Expresión Prefija:</label>
+            <input type="text" id="prefix" readonly>
+        </div>
+        <div class="form-group">
+            <label for="result">Resultado:</label>
+            <input type="text" id="result" readonly>
+        </div>
+    </div>
+    <script type="module" src="src/controllers/index.js"></script>
+</body>
+</html>
