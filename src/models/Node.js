@@ -1,3 +1,4 @@
+
 class Node {
     constructor(data) {
         this.data = data;
@@ -5,4 +6,4 @@ class Node {
     }
 }
 
-export default Node;
+export {Node};
