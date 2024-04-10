@@ -17,24 +17,24 @@ class conversor {
         for (let i = infix.length - 1; i >= 0; i--) {
             if (this.isOperator(infix[i])) {
                 while (operators.top && operators.top.data !== '(') {
-                    prefix.push(operators.pop()); // Utiliza push para agregar al final del array
+                    prefix.push(operators.pop());
                 }
                 operators.push(infix[i]);
             } else if (infix[i] === ')') {
                 operators.push(infix[i]);
             } else if (infix[i] === '(') {
                 while (operators.top && operators.top.data !== ')') {
-                    prefix.push(operators.pop()); // Utiliza push para agregar al final del array
+                    prefix.push(operators.pop()); 
                 }
                 operators.pop();
             } else {
-                prefix.push(infix[i]); // Utiliza push para agregar al final del array
+                prefix.push(infix[i]); 
             }
         }
         while (operators.top) {
-            prefix.push(operators.pop()); // Utiliza push para agregar al final del array
+            prefix.push(operators.pop()); 
         }
-        return prefix.reverse().join(''); // Invierte el orden del array para obtener la notación prefija correcta
+        return prefix.reverse().join(''); 
     }
 
     static calculatePrefix(prefix) {
